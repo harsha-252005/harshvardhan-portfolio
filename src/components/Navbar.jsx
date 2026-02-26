@@ -34,8 +34,11 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${scrolled ? 'scale-95' : 'scale-100'}`}>
-            <div className="glass-pill px-8 md:px-12 py-4 flex items-center gap-8 md:gap-14 border-neon-primary/20 bloom-neon" style={{ border: '1px solid rgba(255, 0, 127, 0.2)' }}>
+        <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-auto max-w-[95vw] md:max-w-none ${scrolled ? 'scale-95' : 'scale-100'}`}>
+            <div
+                className="glass-pill px-6 md:px-12 py-4 flex items-center gap-6 md:gap-14 border-neon-primary/20 bloom-neon overflow-x-auto scrollbar-hide no-scrollbar whitespace-nowrap"
+                style={{ border: '1px solid rgba(255, 0, 127, 0.2)', maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
+            >
                 {navLinks.map((link) => (
                     <a
                         key={link.id}
@@ -44,7 +47,7 @@ export default function Navbar() {
                             e.preventDefault();
                             document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
                         }}
-                        className={`text-[12px] font-black uppercase tracking-[0.4em] transition-all duration-300 relative py-1 group ${active === link.id ? 'text-neon-primary' : 'text-text-muted hover:text-white'
+                        className={`text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] transition-all duration-300 relative py-1 group ${active === link.id ? 'text-neon-primary' : 'text-text-muted hover:text-white'
                             }`}
                     >
                         {link.name}
