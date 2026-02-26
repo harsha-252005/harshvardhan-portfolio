@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-primary: #ff007f;
+  /* Vibrant Pink - Catchy */
+  --color-neon-secondary: #00e5ff;
+  /* Electric Blue */
+  --color-neon-purple: #bc00ff;
+  --color-cyber-bg: #0d1117;
+  --color-cyber-card: rgba(22, 27, 34, 0.85);
+  --color-cyber-border: rgba(255, 0, 127, 0.2);
+  --color-text-bright: #ffffff;
+  --color-text-dim: #cbd5e1;
+  --color-text-muted: #94a3b8;
+}
+
+/* ============================== */
+/* CORE & SNAP                    */
+/* ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cyber-bg);
+  color: var(--color-text-bright);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* ============================== */
+/* BACKGROUND & CYBER EFFECTS     */
+/* ============================== */
+
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 0, 127, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 127, 0.05) 1px, transparent 1px);
+  background-size: 55px 55px;
+  perspective: 1000px;
+  transform: rotateX(60deg) translateY(-80px);
+  mask-image: radial-gradient(circle at center, black 0%, black 85%, transparent 100%);
+  pointer-events: none;
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.scanner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-neon-primary), transparent);
+  opacity: 0.15;
+  filter: blur(1.5px);
+  pointer-events: none;
+  z-index: 100;
+  animation: scan-line 8s linear infinite;
+}
+
+/* ============================== */
+/* TYPOGRAPHY & BLOOM             */
+/* ============================== */
+
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.neon-text-gradient {
+  background: linear-gradient(135deg, #ff007f 10%, #00e5ff 50%, #bc00ff 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.4));
+}
+
+.bloom-neon {
+  box-shadow:
+    0 0 25px rgba(255, 0, 127, 0.1),
+    inset 0 0 12px rgba(255, 0, 127, 0.05);
+}
+
+/* ============================== */
+/* CARDS & GLASS                  */
+/* ============================== */
+
+.cyber-card {
+  background: rgba(22, 27, 34, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-cyber-border);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.glass-pill {
+  background: rgba(22, 27, 34, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 0, 127, 0.3);
+}
+
+/* ============================== */
+/* ANIMATIONS                     */
+/* ============================== */
+
+@keyframes orb-float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+}
+
+.orb-animate {
+  animation: orb-float 15s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
