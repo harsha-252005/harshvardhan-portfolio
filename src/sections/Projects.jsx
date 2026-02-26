@@ -58,12 +58,12 @@ export default function Projects() {
                     subtitle="Explore a selection of my works built with Spring Boot, React, and Java."
                 />
 
-                <div className="flex flex-wrap items-center justify-center gap-12 md:gap-24 mb-20 border-b border-white/5 pb-10 max-w-5xl mx-auto w-full">
+                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-24 mb-16 md:mb-20 border-b border-white/5 pb-8 md:pb-10 max-w-5xl mx-auto w-full">
                     {filters.map(filter => (
                         <button
                             key={filter}
                             onClick={() => setActive(filter)}
-                            className={`text-[12px] font-black uppercase tracking-[0.5em] transition-all duration-500 relative py-4 hover:scale-110 ${active === filter ? 'text-neon-primary drop-shadow-[0_0_15px_rgba(255, 0, 127, 0.7)]' : 'text-text-muted hover:text-white'
+                            className={`text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] transition-all duration-500 relative py-3 md:py-4 hover:scale-110 ${active === filter ? 'text-neon-primary drop-shadow-[0_0_15px_rgba(255, 0, 127, 0.7)]' : 'text-text-muted hover:text-white'
                                 }`}
                         >
                             {filter}

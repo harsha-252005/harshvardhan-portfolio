@@ -86,7 +86,7 @@ export default function Skills() {
             <div className="relative z-10 w-full max-w-7xl flex flex-col items-center px-10">
                 <SectionTitle label="— ARSENAL —" title="Tech Stack" subtitle="Proficient in building modern, scalable web applications with industry-standard tools." />
 
-                <div className="flex flex-wrap items-center justify-center gap-20 md:gap-40 mb-20 w-full max-w-5xl">
+                <div className="flex flex-wrap items-center justify-center gap-12 md:gap-40 mb-16 md:mb-20 w-full max-w-5xl">
                     {[
                         { label: 'Total Projects', val: 5 },
                         { label: 'Public Repos', val: repos ?? 10 },
@@ -100,15 +100,15 @@ export default function Skills() {
                             transition={{ delay: i * 0.1 }}
                             className="text-center group"
                         >
-                            <h3 className="text-6xl md:text-8xl font-black font-mono text-white group-hover:text-neon-primary transition-colors duration-700 drop-shadow-[0_0_20px_rgba(255, 0, 127, 0.4)]">
+                            <h3 className="text-5xl md:text-8xl font-black font-mono text-white group-hover:text-neon-primary transition-colors duration-700 drop-shadow-[0_0_20px_rgba(255, 0, 127, 0.4)]">
                                 {s.val}<span className="text-neon-primary/30 tracking-tighter">+</span>
                             </h3>
-                            <p className="text-[11px] tracking-[0.5em] uppercase font-black text-text-muted mt-4 group-hover:text-neon-primary transition-colors">{s.label}</p>
+                            <p className="text-[10px] md:text-[11px] tracking-[0.3em] md:tracking-[0.5em] uppercase font-black text-text-muted mt-3 md:mt-4 group-hover:text-neon-primary transition-colors">{s.label}</p>
                         </motion.div>
                     ))}
                 </div>
 
-                <div ref={ref} className="grid grid-cols-2 sm:grid-cols-4 gap-y-20 gap-x-16 md:gap-x-32 justify-items-center w-full max-w-6xl">
+                <div ref={ref} className="grid grid-cols-2 sm:grid-cols-4 gap-y-12 md:gap-y-20 gap-x-8 md:gap-x-32 justify-items-center w-full max-w-6xl">
                     {allSkills.map((skill, i) => (
                         <SkillIndicator key={skill.name} skill={skill} inView={inView} delay={i * 0.08} />
                     ))}
