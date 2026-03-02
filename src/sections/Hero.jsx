@@ -27,8 +27,8 @@ export default function Hero() {
 
                 <div className="relative inline-block">
                     <h1
-                        className="font-heading font-black tracking-tighter leading-[0.9] mb-4 neon-text-gradient uppercase text-center whitespace-nowrap px-2"
-                        style={{ fontSize: 'clamp(1.6rem, 10.5vw, 7.5rem)' }}
+                        className="font-heading font-black tracking-tighter leading-[0.9] mb-4 neon-text-gradient uppercase text-center whitespace-nowrap px-4 w-full"
+                        style={{ fontSize: 'clamp(1.3rem, 7.8vw, 7.5rem)' }}
                     >
                         HARSHVARDHAN R
                     </h1>

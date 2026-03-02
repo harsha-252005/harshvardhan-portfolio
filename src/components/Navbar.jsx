@@ -41,7 +41,7 @@ export default function Navbar() {
     };
 
     return (
-        <header className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-[100] w-full max-w-fit px-4 md:px-6 pointer-events-none">
+        <header className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-[100] w-[95%] md:w-full max-w-fit px-2 md:px-6 pointer-events-none flex justify-center">
             <motion.nav
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
