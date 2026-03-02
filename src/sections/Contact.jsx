@@ -58,7 +58,7 @@ export default function Contact() {
                     subtitle="Feel free to reach out for collaborations or project inquiries."
                 />
 
-                <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-stretch w-full mt-12 md:mt-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 items-stretch w-full mt-10 md:mt-20">
 
                     {/* Info Card - Pattern Matched + Code Aesthetic */}
                     <motion.div
@@ -72,7 +72,7 @@ export default function Contact() {
                         <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-neon-primary/40 rounded-tl-3xl group-hover:scale-110 transition-transform duration-700 z-20" />
                         <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-neon-primary/40 rounded-br-3xl group-hover:scale-110 transition-transform duration-700 z-20" />
 
-                        <div className="cyber-card p-10 md:p-14 lg:p-16 rounded-[2rem] border border-neon-primary/30 bg-white/[0.01] relative overflow-hidden shadow-2xl h-full flex flex-col">
+                        <div className="cyber-card p-8 md:p-14 lg:p-16 rounded-[2rem] border border-neon-primary/30 bg-white/[0.01] relative overflow-hidden shadow-2xl h-full flex flex-col">
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-primary/40 to-transparent" />
 
                             <div className="mb-14 md:mb-16">
@@ -135,18 +135,18 @@ export default function Contact() {
                         <div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-2 border-l-2 border-neon-primary/40 rounded-bl-3xl group-hover:scale-110 transition-transform duration-700 z-20" />
                         <div className="absolute -top-4 -right-4 w-12 h-12 border-t-2 border-r-2 border-neon-primary/40 rounded-tr-3xl group-hover:scale-110 transition-transform duration-700 z-20" />
 
-                        <div className="cyber-card p-10 md:p-14 lg:p-16 rounded-[2rem] border border-neon-primary/30 bg-white/[0.01] relative overflow-hidden shadow-2xl h-full flex flex-col">
+                        <div className="cyber-card p-8 md:p-14 lg:p-16 rounded-[2rem] border border-neon-primary/30 bg-white/[0.01] relative overflow-hidden shadow-2xl h-full flex flex-col">
                             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-primary/40 to-transparent" />
 
-                            <form onSubmit={handleFinalSubmit} className="space-y-10 md:space-y-12 flex flex-col h-full">
+                            <form onSubmit={handleFinalSubmit} className="space-y-8 md:space-y-12 flex flex-col h-full">
                                 <div className="flex items-center gap-5 mb-8">
                                     <FaPaperPlane className="text-neon-primary" size={24} />
-                                    <h3 className="text-xl md:text-3xl font-bold text-white">Send a Message</h3>
+                                    <h3 className="text-xl md:text-3xl font-bold text-white uppercase tracking-wider">Send a Message</h3>
                                 </div>
 
                                 <div className="space-y-10 flex-1">
                                     <div className="space-y-3">
-                                        <label className="font-mono text-[13px] md:text-[14px] text-zinc-500 italic block ml-1">
+                                        <label className="font-mono text-[12px] md:text-[14px] text-zinc-500 italic block ml-1">
                                             // your_name
                                         </label>
                                         <input
@@ -158,7 +158,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="space-y-3">
-                                        <label className="font-mono text-[13px] md:text-[14px] text-zinc-500 italic block ml-1">
+                                        <label className="font-mono text-[12px] md:text-[14px] text-zinc-500 italic block ml-1">
                                             // your_email
                                         </label>
                                         <input
@@ -170,7 +170,7 @@ export default function Contact() {
                                     </div>
 
                                     <div className="space-y-3">
-                                        <label className="font-mono text-[13px] md:text-[14px] text-zinc-500 italic block ml-1">
+                                        <label className="font-mono text-[12px] md:text-[14px] text-zinc-500 italic block ml-1">
                                             // your_message
                                         </label>
                                         <textarea
@@ -187,8 +187,8 @@ export default function Contact() {
                                         type="submit"
                                         disabled={status === 'loading' || status === 'success'}
                                         className={`w-full py-6 md:py-7 rounded-xl font-mono text-sm md:text-lg font-bold flex items-center justify-center gap-5 transition-all duration-300 ${status === 'success'
-                                                ? 'bg-green-500 text-black'
-                                                : 'bg-neon-primary text-[#09090b] hover:brightness-110 active:scale-[0.98] shadow-[0_0_40px_rgba(255,0,127,0.4)]'
+                                            ? 'bg-green-500 text-black'
+                                            : 'bg-neon-primary text-[#09090b] hover:brightness-110 active:scale-[0.98] shadow-[0_0_40px_rgba(255,0,127,0.4)]'
                                             } disabled:opacity-70`}
                                     >
                                         <FaPaperPlane size={20} className={status === 'loading' ? 'animate-pulse' : ''} />

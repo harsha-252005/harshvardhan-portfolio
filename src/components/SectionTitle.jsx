@@ -7,7 +7,7 @@ export default function SectionTitle({ label, title, subtitle }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16 flex flex-col items-center w-full"
+            className="text-center mb-10 md:mb-16 flex flex-col items-center w-full"
         >
             {label && (
                 <p className="text-[11px] tracking-[0.6em] font-black uppercase text-neon-primary mb-4 drop-shadow-[0_0_12px_rgba(255, 0, 127, 0.5)]">

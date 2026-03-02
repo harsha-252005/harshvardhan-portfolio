@@ -13,14 +13,14 @@ export default function About() {
         <section id="about" className="snap-section relative !justify-center overflow-y-auto md:overflow-hidden">
             <div className="cyber-grid opacity-15" />
 
-            <div className="relative z-10 w-full max-w-6xl flex flex-col items-center px-6 py-16 md:py-40 space-y-20 md:space-y-48">
+            <div className="relative z-10 w-full max-w-6xl flex flex-col items-center px-6 py-12 md:py-40 space-y-24 md:space-y-48">
                 <SectionTitle
                     label="— ABOUT ME —"
                     title="Core Identity"
                     subtitle="Energetic and detail-oriented engineering student dedicated to building high-quality digital solutions."
                 />
 
-                <div className="grid md:grid-cols-3 gap-6 md:gap-10 w-full max-w-5xl">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 w-full max-w-5xl">
                     {coreIdentityPoints.map((point, i) => (
                         <motion.div
                             key={point.label}
@@ -53,14 +53,14 @@ export default function About() {
                     <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-neon-primary/60 to-transparent" />
                     <div className="absolute inset-0 bg-gradient-to-br from-neon-primary/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
-                    <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14 relative z-10">
-                        <div className="w-16 h-16 md:w-24 md:h-24 rounded-[1.5rem] md:rounded-[2.5rem] bg-neon-primary/10 border-2 border-neon-primary/30 flex items-center justify-center text-neon-primary shadow-[0_0_40px_rgba(255,0,127,0.15)] group-hover:rotate-[10deg] transition-all duration-700">
-                            <HiAcademicCap size={40} md:size={56} className="scale-75 md:scale-100" />
+                    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-14 relative z-10">
+                        <div className="w-16 h-16 md:w-24 md:h-24 rounded-[1.2rem] md:rounded-[2.5rem] bg-neon-primary/10 border-2 border-neon-primary/30 flex items-center justify-center text-neon-primary shadow-[0_0_40px_rgba(255,0,127,0.15)] group-hover:rotate-[10deg] transition-all duration-700">
+                            <HiAcademicCap size={32} md:size={56} className="scale-75 md:scale-100" />
                         </div>
 
                         <div className="flex-1 text-center md:text-left">
                             <h3 className="font-heading text-xl md:text-5xl font-black mb-1 text-white uppercase tracking-tight">
-                                B.Tech — IT
+                                B.Tech IT
                             </h3>
                             <p className="text-neon-primary mb-3 md:mb-6 tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] md:text-[12px] font-black drop-shadow-[0_0_10px_rgba(255,0,127,0.4)] px-4 md:px-0">
                                 Sri Krishna College of Engg and Tech
@@ -70,12 +70,12 @@ export default function About() {
                                 Coimbatore — SKCET
                             </p>
 
-                            <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 md:gap-12 text-[9px] md:text-[12px] text-text-dim font-black tracking-[0.2em] uppercase">
+                            <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-3 md:gap-12 text-[10px] md:text-[12px] text-text-dim font-black tracking-[0.2em] uppercase">
                                 <span className="flex items-center gap-2 md:gap-3">
-                                    <HiCalendar className="text-neon-primary" size={16} /> 2023 - 2027
+                                    <HiCalendar className="text-neon-primary" size={14} /> 2023 - 2027
                                 </span>
                                 <span className="flex items-center gap-2 md:gap-3">
-                                    <HiLocationMarker className="text-neon-primary" size={16} /> Tamil Nadu, IND
+                                    <HiLocationMarker className="text-neon-primary" size={14} /> Tamil Nadu, IND
                                 </span>
                             </div>
                         </div>

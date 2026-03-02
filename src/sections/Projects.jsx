@@ -58,7 +58,7 @@ export default function Projects() {
                     subtitle="Explore a selection of my works built with Spring Boot, React, and Java."
                 />
 
-                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-24 mb-16 md:mb-20 border-b border-white/5 pb-8 md:pb-10 max-w-5xl mx-auto w-full">
+                <div className="flex flex-wrap items-center justify-center gap-4 md:gap-24 mb-12 md:mb-20 border-b border-white/5 pb-6 md:pb-10 max-w-5xl mx-auto w-full">
                     {filters.map(filter => (
                         <button
                             key={filter}
@@ -77,7 +77,7 @@ export default function Projects() {
                     ))}
                 </div>
 
-                <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-16 w-full max-w-7xl mx-auto">
+                <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 w-full max-w-7xl mx-auto">
                     <AnimatePresence mode="popLayout">
                         {filtered.map((p, i) => (
                             <ProjectCard key={p.title} project={p} index={i} />
