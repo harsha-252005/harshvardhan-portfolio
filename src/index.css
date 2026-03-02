@@ -2,24 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-neon-primary: #818cf8;
+  --color-neon-primary: #2dd4bf;
+  /* Neon Teal/Mint */
+  --color-neon-secondary: #60a5fa;
+  /* Electric Blue */
+  --color-neon-purple: #818cf8;
   /* Soft Indigo */
-  --color-neon-secondary: #38bdf8;
-  /* Soft Sky Blue */
-  --color-neon-purple: #c084fc;
-  /* Soft Purple */
-  --color-cyber-bg: #09090b;
-  /* Deep Zinc-950 */
-  --color-cyber-card: rgba(18, 18, 22, 0.7);
-  /* Muted Surface */
-  --color-cyber-border: rgba(63, 63, 70, 0.3);
-  /* Subtle Zinc-700 Border */
-  --color-text-bright: #fafafa;
-  /* Zinc-50 */
-  --color-text-dim: #d4d4d8;
-  /* Zinc-300 */
-  --color-text-muted: #71717a;
-  /* Zinc-500 */
+  --color-cyber-bg: #020617;
+  /* Deep Navy-Black */
+  --color-cyber-card: rgba(15, 23, 42, 0.8);
+  /* Slate-900 Glass */
+  --color-cyber-border: rgba(45, 212, 191, 0.1);
+  /* Subtle Teal Border */
+  --color-text-bright: #f8fafc;
+  /* Slate-50 */
+  --color-text-dim: #cbd5e1;
+  /* Slate-300 */
+  --color-text-muted: #64748b;
+  /* Slate-500 */
 }
 
 /* ============================== */

@@ -65,18 +65,21 @@ export default function Hero() {
                     </p>
                 </motion.div>
 
-                {/* Medium Scaled Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mt-2 md:mt-4">
-                    <a href="#projects" className="w-full sm:w-auto bg-neon-primary text-white px-10 md:px-12 py-4 md:py-5 rounded-full text-[11px] md:text-[12px] font-black transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,0,127,0.4)] text-center">
-                        VIEW PROJECTS
+                {/* Unified Premium Buttons - Perfectly Sized */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10 mt-4 md:mt-8 w-full px-4">
+                    <a
+                        href="#projects"
+                        className="w-full sm:w-auto min-w-[200px] md:min-w-[240px] bg-neon-primary text-cyber-bg px-8 md:px-12 py-5 md:py-6 rounded-full text-[13px] md:text-[15px] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(45,212,191,0.4)] text-center flex items-center justify-center gap-3"
+                    >
+                        <HiOutlineTerminal size={22} className="opacity-80" /> VIEW PROJECTS
                     </a>
                     <a
                         href="https://drive.google.com/file/d/1Es4l0DQ2ci9fgC1dVlmFYZ7lGBRo8iBx/view?pli=1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 rounded-full text-[11px] md:text-[12px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] border-2 border-neon-primary/30 hover:border-neon-primary hover:text-white transition-all text-text-dim glass-pill group flex items-center justify-center gap-3"
+                        className="w-full sm:w-auto min-w-[200px] md:min-w-[240px] bg-neon-primary text-cyber-bg px-8 md:px-12 py-5 md:py-6 rounded-full text-[13px] md:text-[15px] font-black tracking-[0.2em] md:tracking-[0.3em] uppercase transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(45,212,191,0.4)] text-center flex items-center justify-center gap-3"
                     >
-                        <VscOpenPreview size={18} /> VIEW RESUME
+                        <VscOpenPreview size={22} className="opacity-80" /> VIEW RESUME
                     </a>
                 </div>
 
