@@ -16,9 +16,9 @@ export default function Certifications() {
     const { isDark } = useTheme();
 
     return (
-        <section id="certifications" className={`section-spacing ${isDark ? 'bg-bg-soft' : 'bg-white'}`}>
-            <div className="max-w-4xl mx-auto px-6">
-                <SectionTitle label="Credentials" title="Certifications" />
+        <section id="certifications" className="snap-section">
+            <div className="max-w-5xl mx-auto px-6">
+                <SectionTitle label="— CREDENTIALS —" title="Certifications" subtitle="Professional certifications and technical accomplishments." />
 
                 <div className="grid sm:grid-cols-2 gap-6">
                     {certs.map((c, i) => (

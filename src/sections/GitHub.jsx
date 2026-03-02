@@ -17,9 +17,9 @@ export default function GitHub() {
     }, []);
 
     return (
-        <section id="github" className={`section-spacing ${isDark ? 'bg-bg-soft' : 'bg-white'}`}>
-            <div className="max-w-5xl mx-auto px-6">
-                <SectionTitle label="Activity" title="GitHub Contributions" />
+        <section id="github" className="snap-section">
+            <div className="max-w-6xl mx-auto px-6">
+                <SectionTitle label="— ACTIVITY —" title="GitHub Contributions" subtitle="Real-time repository metrics and open-source involvement." />
 
                 {profile && (
                     <motion.div
@@ -70,8 +70,8 @@ export default function GitHub() {
                                 transition={{ delay: i * 0.05 }}
                                 className={`p-6 rounded-xl text-center flex flex-col items-center card ${isDark ? 'card-dark' : 'card-light'}`}
                             >
-                                <FaGithub size={20} className={`mb-4 ${isDark ? 'text-text-muted' : 'text-gray-400'}`} />
-                                <h4 className={`font-bold text-sm mb-2 transition-colors ${isDark ? 'text-white hover:text-accent-soft' : 'text-gray-900 hover:text-accent'}`}>
+                                <FaGithub size={20} className="mb-4 text-neon-primary/60" />
+                                <h4 className="font-bold text-sm mb-2 transition-colors text-white hover:text-neon-primary">
                                     {repo.name}
                                 </h4>
                                 <p className={`text-xs mb-6 line-clamp-2 h-8 ${isDark ? 'text-text-muted' : 'text-gray-500'}`}>

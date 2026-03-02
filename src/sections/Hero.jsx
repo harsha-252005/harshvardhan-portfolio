@@ -7,45 +7,33 @@ import { VscOpenPreview } from 'react-icons/vsc';
 
 export default function Hero() {
     return (
-        <section id="home" className="snap-section">
+        <section id="home" className="snap-section overflow-hidden">
             <div className="cyber-grid" />
             <div className="scanner-overlay" />
 
-            {/* Background Glows (Pink) */}
-            <div className="glow-orb w-[500px] h-[500px] bg-neon-primary/10 -top-20 -left-60 orb-animate opacity-40 blur-[140px]" />
-            <div className="glow-orb w-[400px] h-[400px] bg-neon-secondary/5 bottom-0 -right-40 orb-animate opacity-30 blur-[130px]" style={{ animationDelay: '5s' }} />
-
-            <div className="relative z-10 w-full max-w-5xl flex flex-col items-center gap-6">
-
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="relative z-10 w-full max-w-5xl flex flex-col items-center gap-4 text-center px-6"
+            >
                 {/* Status Badge */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="px-6 py-2 glass-pill flex items-center gap-4 mb-4 border-neon-primary/30"
-                    style={{ boxShadow: '0 0 20px rgba(255, 0, 127, 0.15)' }}
-                >
+                <div className="px-6 py-2 glass-pill flex items-center gap-4 mb-4 border-neon-primary/30 shadow-[0_0_20px_rgba(255,0,127,0.15)]">
                     <HiOutlineTerminal className="text-neon-primary animate-pulse" size={18} />
                     <span className="text-[12px] font-black uppercase tracking-[0.5em] text-neon-primary">
                         System Pulse: Active
                     </span>
-                </motion.div>
+                </div>
 
-                {/* Scaled Name */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative inline-block text-center"
-                >
+                <div className="relative inline-block">
                     <h1
-                        className="font-heading font-black tracking-tight leading-[1] mb-2 neon-text-gradient uppercase text-center px-4"
-                        style={{ fontSize: 'clamp(2.2rem, 10vw, 6.5rem)' }}
+                        className="font-heading font-black tracking-tight leading-[1] mb-2 neon-text-gradient uppercase text-center"
+                        style={{ fontSize: 'clamp(2.5rem, 12vw, 7rem)' }}
                     >
                         HARSHVARDHAN R
                     </h1>
                     <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-neon-primary/50 to-transparent mx-auto blur-[1px]" />
-                </motion.div>
+                </div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -53,7 +41,7 @@ export default function Hero() {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="flex flex-col items-center gap-4 md:gap-6"
                 >
-                    <h2 className="text-xl md:text-5xl font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-white drop-shadow-[0_0_20px_rgba(255,0,127,0.5)]">
+                    <h2 className="text-xl md:text-5xl font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-white drop-shadow-[0_0_20px_rgba(255,0,127,0.5)]">
                         Full Stack Developer
                     </h2>
 
@@ -78,12 +66,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Medium Scaled Buttons */}
-                <motion.div
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.6 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mt-4 md:mt-6"
-                >
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mt-2 md:mt-4">
                     <a href="#projects" className="w-full sm:w-auto bg-neon-primary text-white px-10 md:px-12 py-4 md:py-5 rounded-full text-[11px] md:text-[12px] font-black transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,0,127,0.4)] text-center">
                         VIEW PROJECTS
                     </a>
@@ -95,7 +78,7 @@ export default function Hero() {
                     >
                         <VscOpenPreview size={18} /> VIEW RESUME
                     </a>
-                </motion.div>
+                </div>
 
                 {/* Social Icons */}
                 <motion.div
@@ -120,7 +103,7 @@ export default function Hero() {
                         </a>
                     ))}
                 </motion.div>
-            </div>
+            </motion.div>
 
             <motion.div
                 animate={{ y: [0, 10, 0] }}

@@ -22,9 +22,9 @@ export default function LeetCode() {
     const { isDark } = useTheme();
 
     return (
-        <section id="leetcode" className={`section-spacing ${isDark ? 'bg-bg' : 'bg-bg-light'}`}>
-            <div className="max-w-4xl mx-auto px-6 text-center">
-                <SectionTitle label="Competitive" title="LeetCode Journey" />
+        <section id="leetcode" className="snap-section">
+            <div className="max-w-5xl mx-auto px-6 text-center">
+                <SectionTitle label="— COMPETITIVE —" title="LeetCode Journey" subtitle="Visualizing problem-solving milestones and technical growth." />
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -32,8 +32,8 @@ export default function LeetCode() {
                     viewport={{ once: true }}
                     className={`p-10 rounded-2xl flex flex-col items-center card ${isDark ? 'card-dark' : 'card-light'}`}
                 >
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${isDark ? 'bg-yellow-500/10' : 'bg-yellow-50'}`}>
-                        <SiLeetcode size={32} className="text-yellow-500" />
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 relative z-10 bg-neon-primary/10 border border-neon-primary/20 shadow-[0_0_30px_rgba(255,0,127,0.1)]`}>
+                        <SiLeetcode size={32} className="text-neon-primary" />
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-10 w-full max-w-2xl">

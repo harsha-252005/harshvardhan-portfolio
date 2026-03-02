@@ -11,10 +11,9 @@ import Contact from './sections/Contact';
 export default function App() {
   return (
     <ThemeProvider>
+      <MouseGlow />
+      <Navbar />
       <div className="snap-container">
-        <MouseGlow />
-        <Navbar />
-
         <Hero />
         <About />
         <Skills />

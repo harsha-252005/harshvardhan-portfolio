@@ -7,9 +7,9 @@ export default function Achievements() {
     const { isDark } = useTheme();
 
     return (
-        <section id="achievements" className={`section-spacing ${isDark ? 'bg-bg' : 'bg-bg-light'}`}>
-            <div className="max-w-3xl mx-auto px-6">
-                <SectionTitle label="Recognition" title="Achievements" />
+        <section id="achievements" className="snap-section">
+            <div className="max-w-4xl mx-auto px-6">
+                <SectionTitle label="— RECOGNITION —" title="Achievements" subtitle="Celebrating professional milestones and competition successes." />
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -19,8 +19,7 @@ export default function Achievements() {
                     className={`p-10 rounded-2xl flex flex-col items-center text-center card overflow-hidden relative ${isDark ? 'card-dark' : 'card-light'
                         }`}
                 >
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-8 relative z-10 ${isDark ? 'bg-accent/10 text-accent-soft' : 'bg-accent/5 text-accent'
-                        }`}>
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mb-8 relative z-10 bg-neon-primary/10 text-neon-primary border border-neon-primary/20 shadow-[0_0_30px_rgba(255,0,127,0.2)]">
                         <HiTrophy size={28} />
                     </div>
 

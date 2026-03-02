@@ -101,9 +101,9 @@ export default function Skills() {
                             className="text-center group"
                         >
                             <h3 className="text-5xl md:text-8xl font-black font-mono text-white group-hover:text-neon-primary transition-colors duration-700 drop-shadow-[0_0_20px_rgba(255, 0, 127, 0.4)]">
-                                {s.val}<span className="text-neon-primary/30 tracking-tighter">+</span>
+                                {s.val}<span className="text-neon-primary/30 tracking-tighter text-3xl md:text-6xl">+</span>
                             </h3>
-                            <p className="text-[10px] md:text-[11px] tracking-[0.3em] md:tracking-[0.5em] uppercase font-black text-text-muted mt-3 md:mt-4 group-hover:text-neon-primary transition-colors">{s.label}</p>
+                            <p className="text-[10px] md:text-[11px] tracking-[0.2em] md:tracking-[0.5em] uppercase font-black text-text-muted mt-2 md:mt-4 group-hover:text-neon-primary transition-colors">{s.label}</p>
                         </motion.div>
                     ))}
                 </div>
