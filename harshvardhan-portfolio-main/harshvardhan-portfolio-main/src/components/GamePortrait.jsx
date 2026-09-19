@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 const characters = ' .:-=+*#%@'.split('');
 
 function canvasSize() {
-  if (window.innerWidth <= 480) return Math.min(220, window.innerWidth - 40);
-  if (window.innerWidth <= 768) return Math.min(280, window.innerWidth - 60);
+  if (window.innerWidth <= 480) return Math.min(300, window.innerWidth - 32);
+  if (window.innerWidth <= 768) return Math.min(340, window.innerWidth - 48);
   return 400;
 }
 
