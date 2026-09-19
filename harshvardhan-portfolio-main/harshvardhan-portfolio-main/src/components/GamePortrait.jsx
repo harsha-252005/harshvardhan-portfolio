@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 const characters = ' .:-=+*#%@'.split('');
 
 function canvasSize() {
-  if (window.innerWidth <= 480) return Math.min(300, window.innerWidth - 32);
-  if (window.innerWidth <= 768) return Math.min(340, window.innerWidth - 48);
+  // Keep the portrait's particle geometry identical to the desktop artwork.
+  // CSS handles visual scaling for smaller viewports.
   return 400;
 }
 
